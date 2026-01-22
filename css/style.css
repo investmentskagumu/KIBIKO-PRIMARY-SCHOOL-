@@ -237,28 +237,53 @@ footer {
   margin-top: 12px;
 }
 /* =======================================================
-   PRINCIPAL SECTION
+/* =======================================================
+   PRINCIPAL SECTION – UPDATED (Clean + Responsive)
 ======================================================= */
 
-.principal-card {
+.principal-section {
   grid-column: 1 / -1;
+  position: relative;
+  z-index: 1;
 }
 
-.principal-wrap {
+.principal-card {
+  border-top: 3px solid #ffffff;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 22px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.principal-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+}
+
+.principal-header p {
+  margin: 0 0 18px 0;
+  font-size: 15px;
+  color: rgba(255,255,255,0.9);
+  max-width: 850px;
+}
+
+.principal-body {
   display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 20px;
-  margin-top: 15px;
+  grid-template-columns: 280px 1fr;
+  gap: 22px;
   align-items: center;
 }
 
 .principal-photo {
   width: 100%;
-  height: 280px;
-  border-radius: 10px;
+  height: 320px;
+  border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.2);
-  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
 }
 
 .principal-photo img {
@@ -270,15 +295,15 @@ footer {
 
 .principal-text h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 26px;
+  font-size: 28px;
   margin: 0 0 6px 0;
 }
 
-.principal-text .role {
+.principal-role {
   font-size: 14px;
   font-weight: 700;
-  color: rgba(245, 220, 81, 0.95);
   margin: 0 0 12px 0;
+  color: rgba(245, 220, 81, 0.95);
 }
 
 .principal-text p {
@@ -287,25 +312,39 @@ footer {
   color: rgba(255,255,255,0.92);
 }
 
-.principal-text .tagline {
+.principal-quote {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-left: 4px solid rgba(199, 175, 38, 0.9);
+  background: rgba(199, 175, 38, 0.14);
+  border-radius: 8px;
   font-style: italic;
-  padding: 10px 12px;
-  border-left: 3px solid rgba(199, 175, 38, 0.8);
-  background: rgba(199, 175, 38, 0.12);
-  border-radius: 6px;
-  margin-top: 12px;
+  color: rgba(255,255,255,0.95);
 }
 
-/* Mobile responsiveness */
+/* Mobile Fix */
 @media (max-width: 768px) {
-  .principal-wrap {
+  .principal-card {
+    padding: 18px;
+  }
+
+  .principal-body {
     grid-template-columns: 1fr;
   }
 
   .principal-photo {
     height: 240px;
   }
+
+  .principal-header h2 {
+    font-size: 22px;
+  }
+
+  .principal-text h3 {
+    font-size: 24px;
+  }
 }
+
 /* =======================================================
    LANDSCAPE HERO BANNER (All Pages)
 ======================================================= */
@@ -576,3 +615,4 @@ footer {
     font-size: 14px;
   }
 }
+
