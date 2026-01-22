@@ -359,3 +359,220 @@ footer {
     font-size: 15px;
   }
 }
+/* =======================================================
+   MOBILE RESPONSIVENESS & COMPACT LAYOUT
+======================================================= */
+
+@media (max-width: 768px) {
+
+  /* BODY */
+  body {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 0 12px 0 0;
+    display: inline-block;
+    font-size: 14px;
+  }
+
+  /* HERO TEXT */
+  .hero h1,
+  .hero-overlay h1 {
+    font-size: 30px;
+  }
+
+  .hero p,
+  .hero-overlay p {
+    font-size: 15px;
+  }
+
+  /* MAIN CONTENT */
+  .content {
+    padding: 25px 18px;
+    gap: 22px;
+  }
+
+  /* CARDS */
+  .card h2 {
+    font-size: 20px;
+  }
+
+  /* BUTTONS */
+  .btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  /* WALL OF FAME */
+  .fame-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fame-photo {
+    height: 200px;
+  }
+
+  /* PRINCIPAL SECTION */
+  .principal-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .principal-photo {
+    height: 230px;
+  }
+
+  /* DOWNLOADS TABLE / LIST */
+  .downloads-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 20px 15px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 480px) {
+
+  .hero-overlay h1 {
+    font-size: 26px;
+  }
+
+  .hero-overlay p {
+    font-size: 14px;
+  }
+
+  .card h2 {
+    font-size: 18px;
+  }
+
+  .fame-info h3 {
+    font-size: 20px;
+  }
+
+  .fame-info p {
+    font-size: 14px;
+  }
+}
+
+/* =======================================================
+   MOBILE RESPONSIVENESS & COMPACT LAYOUT
+======================================================= */
+
+@media (max-width: 768px) {
+
+  /* BODY */
+  body {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 0 12px 0 0;
+    display: inline-block;
+    font-size: 14px;
+  }
+
+  /* HERO TEXT */
+  .hero h1,
+  .hero-overlay h1 {
+    font-size: 30px;
+  }
+
+  .hero p,
+  .hero-overlay p {
+    font-size: 15px;
+  }
+
+  /* MAIN CONTENT */
+  .content {
+    padding: 25px 18px;
+    gap: 22px;
+  }
+
+  /* CARDS */
+  .card h2 {
+    font-size: 20px;
+  }
+
+  /* BUTTONS */
+  .btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  /* WALL OF FAME */
+  .fame-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fame-photo {
+    height: 200px;
+  }
+
+  /* PRINCIPAL SECTION */
+  .principal-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .principal-photo {
+    height: 230px;
+  }
+
+  /* DOWNLOADS TABLE / LIST */
+  .downloads-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 20px 15px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 480px) {
+
+  .hero-overlay h1 {
+    font-size: 26px;
+  }
+
+  .hero-overlay p {
+    font-size: 14px;
+  }
+
+  .card h2 {
+    font-size: 18px;
+  }
+
+  .fame-info h3 {
+    font-size: 20px;
+  }
+
+  .fame-info p {
+    font-size: 14px;
+  }
+}
