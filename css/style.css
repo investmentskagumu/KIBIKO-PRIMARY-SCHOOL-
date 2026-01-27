@@ -237,7 +237,6 @@ footer {
   margin-top: 12px;
 }
 /* =======================================================
-/* =======================================================
    PRINCIPAL SECTION – UPDATED (Clean + Responsive)
 ======================================================= */
 
@@ -320,6 +319,29 @@ footer {
   border-radius: 8px;
   font-style: italic;
   color: rgba(255,255,255,0.95);
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+  .principal-card {
+    padding: 18px;
+  }
+
+  .principal-body {
+    grid-template-columns: 1fr;
+  }
+
+  .principal-photo {
+    height: 240px;
+  }
+
+  .principal-header h2 {
+    font-size: 22px;
+  }
+
+  .principal-text h3 {
+    font-size: 24px;
+  }
 }
 
 /* Mobile Fix */
@@ -615,3 +637,4 @@ footer {
     font-size: 14px;
   }
 }
+
