@@ -2,6 +2,19 @@
    Kibiko Primary School – Forbes Style + African Art
 ======================================================= */
 
+/* GLOBAL SAFETY */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* BODY */
 body {
   margin: 0;
@@ -9,34 +22,40 @@ body {
   color: #ffffff;
   line-height: 1.6;
 
-  /* Dark background with subtle African pattern */
   background-color: #2b323b;
-  background-image: url('assets/images/african-pattern.png'); /* subtle tribal pattern */
+  background-image: url('assets/images/african-pattern.png');
   background-size: 250px 250px;
   background-repeat: repeat;
   background-attachment: fixed;
   position: relative;
 }
 
-/* Overlay for readability */
+/* Overlay */
 body::before {
   content: "";
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(43, 50, 59, 0.85); /* dark semi-transparent overlay */
+  inset: 0;
+  background: rgba(43, 50, 59, 0.85);
   pointer-events: none;
   z-index: 0;
+}
+
+/* MEDIA */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 20px 40px;
-  background: rgba(255, 255, 255, 0.95);
-  color: #000000;
-  border-bottom: 1px solid #0000007e;
+  background: rgba(255,255,255,0.95);
+  color: #000;
+  border-bottom: 1px solid rgba(0,0,0,0.4);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -48,20 +67,25 @@ body::before {
   font-weight: 700;
 }
 
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
 nav a {
-  margin-left: 20px;
   text-decoration: none;
-  color: #000000;
+  color: #000;
   font-weight: 500;
   transition: color 0.12s linear;
 }
 
 nav a:hover {
-  text-decoration: underline;
   color: #c7af26;
+  text-decoration: underline;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
   padding: 80px 40px;
   text-align: center;
@@ -72,7 +96,6 @@ nav a:hover {
 .hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: 42px;
-  margin-bottom: 15px;
 }
 
 .hero p {
@@ -81,281 +104,14 @@ nav a:hover {
   margin: auto;
 }
 
-/* CONTENT GRID */
-.content {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  position: relative;
-  z-index: 1;
-}
-
-/* CARD STYLING */
-.card {
-  border-top: 3px solid #ffffff;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.5); /* semi-transparent for readability */
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  transition: transform 0.15s linear, box-shadow 0.15s linear;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-}
-
-.card h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  background: rgba(245, 220, 81, 0.15);
-  color: #ffffff;
-  padding: 5px 10px;
-  border-radius: 4px;
-  transition: background 0.12s linear, color 0.12s linear;
-}
-
-/* BUTTONS */
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 18px;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-  background: rgba(199, 175, 38, 0.25);
-  border-radius: 4px;
-  transition: background 0.12s linear, color 0.12s linear, transform 0.12s linear;
-}
-
-.btn:hover {
-  background: rgba(199, 36, 36, 0.85);
-  color: #ffffff;
-  transform: translateY(-2px);
-}
-
-/* FOOTER */
-footer {
-  border-top: 1px solid #e5e5e5;
-  padding: 30px;
-  text-align: center;
-  font-size: 14px;
-  background: rgba(255, 255, 255, 0.95);
-  color: #000000;
-  position: relative;
-  z-index: 1;
-}
-
-/* RESPONSIVE TEXT */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 34px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-}
-/* =======================================================
-   WALL OF FAME – ICT CLUB
-======================================================= */
-
-.wall-title {
-  grid-column: 1 / -1;
-}
-
-.fame-grid {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
-
-.fame-card {
-  background: rgba(0, 0, 0, 0.55);
-  border-top: 3px solid #ffffff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
-  transition: transform 0.12s linear, box-shadow 0.12s linear;
-}
-
-.fame-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 14px rgba(0,0,0,0.35);
-}
-
-.fame-photo {
-  width: 100%;
-  height: 220px;
-  background: rgba(255,255,255,0.04);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.fame-photo img {
-  height: 220px;
-  width: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.fame-info {
-  padding: 18px 18px 22px;
-}
-
-.fame-info h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  margin: 0 0 6px 0;
-}
-
-.fame-info .role {
-  font-size: 14px;
-  font-weight: 600;
-  color: rgba(245, 220, 81, 0.95);
-  margin: 0 0 12px 0;
-}
-
-.fame-info p {
-  margin: 0 0 12px 0;
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.fame-info .tagline {
-  font-style: italic;
-  padding: 10px 12px;
-  border-left: 3px solid rgba(199, 175, 38, 0.8);
-  background: rgba(199, 175, 38, 0.12);
-  border-radius: 6px;
-  margin-top: 12px;
-}
-/* =======================================================
-/* =======================================================
-   PRINCIPAL SECTION – UPDATED (Clean + Responsive)
-======================================================= */
-
-.principal-section {
-  grid-column: 1 / -1;
-  position: relative;
-  z-index: 1;
-}
-
-.principal-card {
-  border-top: 3px solid #ffffff;
-  background: rgba(0, 0, 0, 0.55);
-  border-radius: 12px;
-  overflow: hidden;
-  padding: 22px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-}
-
-.principal-header h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 26px;
-  margin: 0 0 8px 0;
-  color: #ffffff;
-}
-
-.principal-header p {
-  margin: 0 0 18px 0;
-  font-size: 15px;
-  color: rgba(255,255,255,0.9);
-  max-width: 850px;
-}
-
-.principal-body {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 22px;
-  align-items: center;
-}
-
-.principal-photo {
-  width: 100%;
-  height: 320px;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.15);
-  background: rgba(255,255,255,0.05);
-}
-
-.principal-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.principal-text h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  margin: 0 0 6px 0;
-}
-
-.principal-role {
-  font-size: 14px;
-  font-weight: 700;
-  margin: 0 0 12px 0;
-  color: rgba(245, 220, 81, 0.95);
-}
-
-.principal-text p {
-  font-size: 15px;
-  margin: 0 0 12px 0;
-  color: rgba(255,255,255,0.92);
-}
-
-.principal-quote {
-  margin-top: 14px;
-  padding: 12px 14px;
-  border-left: 4px solid rgba(199, 175, 38, 0.9);
-  background: rgba(199, 175, 38, 0.14);
-  border-radius: 8px;
-  font-style: italic;
-  color: rgba(255,255,255,0.95);
-}
-
-/* Mobile Fix */
-@media (max-width: 768px) {
-  .principal-card {
-    padding: 18px;
-  }
-
-  .principal-body {
-    grid-template-columns: 1fr;
-  }
-
-  .principal-photo {
-    height: 240px;
-  }
-
-  .principal-header h2 {
-    font-size: 22px;
-  }
-
-  .principal-text h3 {
-    font-size: 24px;
-  }
-}
-
-/* =======================================================
-   LANDSCAPE HERO BANNER (All Pages)
-======================================================= */
-
+/* HERO BANNER */
 .hero-banner {
   width: 100%;
   height: 340px;
   background: url("assets/images/kibiko-landscape.jpg") center/cover no-repeat;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
   position: relative;
   z-index: 1;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 
 .hero-overlay {
@@ -373,61 +129,147 @@ footer {
 .hero-overlay h1 {
   font-family: 'Playfair Display', serif;
   font-size: 46px;
-  margin: 0 0 10px 0;
-  color: #ffffff;
 }
 
 .hero-overlay p {
   font-size: 18px;
-  margin: 0;
-  color: rgba(255,255,255,0.92);
   max-width: 720px;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .hero-banner {
-    height: 260px;
-  }
-
-  .hero-overlay h1 {
-    font-size: 32px;
-  }
-
-  .hero-overlay p {
-    font-size: 15px;
-  }
+/* CONTENT GRID */
+.content {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  position: relative;
+  z-index: 1;
 }
-/* =======================================================
-   MOBILE RESPONSIVENESS & COMPACT LAYOUT
-======================================================= */
 
+/* CARD */
+.card {
+  background: rgba(0,0,0,0.5);
+  border-top: 3px solid #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.12s linear, box-shadow 0.12s linear;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 14px rgba(0,0,0,0.3);
+}
+
+.card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  background: rgba(245,220,81,0.15);
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(199,175,38,0.25);
+  border-radius: 4px;
+  transition: background 0.12s linear, transform 0.12s linear;
+}
+
+.btn:hover {
+  background: rgba(199,36,36,0.85);
+  transform: translateY(-2px);
+}
+
+/* WALL OF FAME */
+.fame-grid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 25px;
+}
+
+.fame-card {
+  background: rgba(0,0,0,0.55);
+  border-top: 3px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fame-photo {
+  height: 220px;
+}
+
+.fame-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fame-info {
+  padding: 18px;
+}
+
+/* PRINCIPAL */
+.principal-section {
+  grid-column: 1 / -1;
+}
+
+.principal-card {
+  background: rgba(0,0,0,0.55);
+  border-top: 3px solid #fff;
+  padding: 22px;
+  border-radius: 12px;
+}
+
+.principal-body {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 22px;
+}
+
+.principal-photo {
+  height: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.principal-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* FOOTER */
+footer {
+  background: rgba(255,255,255,0.95);
+  color: #000;
+  padding: 30px;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+/* =======================
+   RESPONSIVE BREAKPOINTS
+======================= */
+
+/* Tablets & Phones */
 @media (max-width: 768px) {
 
-  /* BODY */
-  body {
-    font-size: 15px;
-    line-height: 1.55;
-  }
-
-  /* NAVBAR */
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
     padding: 15px 20px;
   }
 
-  nav {
-    margin-top: 10px;
-  }
-
-  nav a {
-    margin: 0 12px 0 0;
-    display: inline-block;
-    font-size: 14px;
-  }
-
-  /* HERO TEXT */
   .hero h1,
   .hero-overlay h1 {
     font-size: 30px;
@@ -438,52 +280,29 @@ footer {
     font-size: 15px;
   }
 
-  /* MAIN CONTENT */
   .content {
     padding: 25px 18px;
-    gap: 22px;
   }
 
-  /* CARDS */
-  .card h2 {
-    font-size: 20px;
-  }
-
-  /* BUTTONS */
-  .btn {
-    padding: 10px 16px;
-    font-size: 14px;
-  }
-
-  /* WALL OF FAME */
-  .fame-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .fame-photo {
-    height: 200px;
-  }
-
-  /* PRINCIPAL SECTION */
-  .principal-wrap {
+  .principal-body {
     grid-template-columns: 1fr;
   }
 
   .principal-photo {
-    height: 230px;
+    height: 240px;
   }
 
-  /* DOWNLOADS TABLE / LIST */
-  .downloads-grid {
+  .fame-grid {
     grid-template-columns: 1fr;
   }
 
-  /* FOOTER */
   footer {
     padding: 20px 15px;
     font-size: 13px;
   }
 }
+
+/* Small Phones */
 @media (max-width: 480px) {
 
   .hero-overlay h1 {
@@ -497,122 +316,4 @@ footer {
   .card h2 {
     font-size: 18px;
   }
-
-  .fame-info h3 {
-    font-size: 20px;
-  }
-
-  .fame-info p {
-    font-size: 14px;
-  }
 }
-
-/* =======================================================
-   MOBILE RESPONSIVENESS & COMPACT LAYOUT
-======================================================= */
-
-@media (max-width: 768px) {
-
-  /* BODY */
-  body {
-    font-size: 15px;
-    line-height: 1.55;
-  }
-
-  /* NAVBAR */
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
-  }
-
-  nav {
-    margin-top: 10px;
-  }
-
-  nav a {
-    margin: 0 12px 0 0;
-    display: inline-block;
-    font-size: 14px;
-  }
-
-  /* HERO TEXT */
-  .hero h1,
-  .hero-overlay h1 {
-    font-size: 30px;
-  }
-
-  .hero p,
-  .hero-overlay p {
-    font-size: 15px;
-  }
-
-  /* MAIN CONTENT */
-  .content {
-    padding: 25px 18px;
-    gap: 22px;
-  }
-
-  /* CARDS */
-  .card h2 {
-    font-size: 20px;
-  }
-
-  /* BUTTONS */
-  .btn {
-    padding: 10px 16px;
-    font-size: 14px;
-  }
-
-  /* WALL OF FAME */
-  .fame-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .fame-photo {
-    height: 200px;
-  }
-
-  /* PRINCIPAL SECTION */
-  .principal-wrap {
-    grid-template-columns: 1fr;
-  }
-
-  .principal-photo {
-    height: 230px;
-  }
-
-  /* DOWNLOADS TABLE / LIST */
-  .downloads-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* FOOTER */
-  footer {
-    padding: 20px 15px;
-    font-size: 13px;
-  }
-}
-@media (max-width: 480px) {
-
-  .hero-overlay h1 {
-    font-size: 26px;
-  }
-
-  .hero-overlay p {
-    font-size: 14px;
-  }
-
-  .card h2 {
-    font-size: 18px;
-  }
-
-  .fame-info h3 {
-    font-size: 20px;
-  }
-
-  .fame-info p {
-    font-size: 14px;
-  }
-}
-
