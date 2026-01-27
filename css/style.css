@@ -16,7 +16,7 @@ body {
   background-attachment: fixed;
 }
 
-/* Overlay for readability */
+/* Dark overlay for readability */
 body::before {
   content: "";
   position: fixed;
@@ -107,7 +107,7 @@ nav a:hover {
 /* ---------------- STANDARD CARD ---------------- */
 .card {
   border-top: 3px solid #ffffff;
-  padding: 22px;
+  padding: 20px;
   background: rgba(0,0,0,0.5);
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
@@ -121,8 +121,7 @@ nav a:hover {
 
 .card h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  margin-bottom: 14px;
+  font-size: 22px;
   background: rgba(245,220,81,0.15);
   padding: 6px 10px;
   border-radius: 4px;
@@ -147,49 +146,37 @@ nav a:hover {
 }
 
 /* =======================================================
-   WALL OF FAME – FLOW-INTEGRATED
+   WALL OF FAME – MATCHES CARD STYLE
 ======================================================= */
 
-.wall-section {
+.wall-title {
   grid-column: 1 / -1;
 }
 
-.wall-section.card {
-  padding: 26px;
-}
-
-.wall-section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 26px;
-  margin-bottom: 18px;
-}
-
-/* Fame grid sits INSIDE normal card */
 .fame-grid {
+  grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
-/* Individual profile card */
 .fame-card {
-  background: rgba(0,0,0,0.45);
   border-top: 3px solid #ffffff;
+  background: rgba(0,0,0,0.5);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   transition: transform 0.12s linear, box-shadow 0.12s linear;
 }
 
 .fame-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 10px rgba(0,0,0,0.28);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
-/* Photo */
 .fame-photo {
   width: 100%;
-  height: 200px;
+  height: 220px;
   overflow: hidden;
 }
 
@@ -199,64 +186,62 @@ nav a:hover {
   object-fit: cover;
 }
 
-/* Text */
 .fame-info {
-  padding: 16px;
+  padding: 18px;
 }
 
 .fame-info h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 21px;
-  margin-bottom: 6px;
+  font-size: 22px;
 }
 
 .fame-info .role {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: rgba(245,220,81,0.95);
   margin-bottom: 10px;
 }
 
 .fame-info p {
-  font-size: 14.5px;
-  line-height: 1.55;
+  font-size: 15px;
   color: rgba(255,255,255,0.92);
 }
 
-/* Quote */
 .fame-info .tagline {
-  margin-top: 10px;
-  padding: 8px 10px;
+  margin-top: 12px;
+  padding: 10px 12px;
   border-left: 3px solid rgba(199,175,38,0.8);
   background: rgba(199,175,38,0.12);
-  border-radius: 5px;
+  border-radius: 6px;
   font-style: italic;
-  font-size: 13.5px;
 }
 
 /* =======================================================
-   PRINCIPAL SECTION – SAME FLOW LOGIC
+   PRINCIPAL SECTION
 ======================================================= */
 
 .principal-section {
   grid-column: 1 / -1;
 }
 
-.principal-section.card {
-  padding: 26px;
+.principal-card {
+  border-top: 3px solid #ffffff;
+  background: rgba(0,0,0,0.55);
+  border-radius: 10px;
+  padding: 22px;
 }
 
 .principal-body {
   display: grid;
   grid-template-columns: 280px 1fr;
-  gap: 24px;
+  gap: 22px;
   align-items: center;
 }
 
 .principal-photo {
   height: 320px;
-  border-radius: 10px;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .principal-photo img {
@@ -268,14 +253,13 @@ nav a:hover {
 .principal-text h3 {
   font-family: 'Playfair Display', serif;
   font-size: 28px;
-  margin-bottom: 6px;
 }
 
 .principal-role {
   font-size: 14px;
   font-weight: 700;
   color: rgba(245,220,81,0.95);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .principal-quote {
@@ -325,11 +309,7 @@ footer {
   }
 
   .content {
-    padding: 24px 18px;
-  }
-
-  .fame-grid {
-    grid-template-columns: 1fr;
+    padding: 25px 18px;
   }
 
   .principal-body {
@@ -353,9 +333,5 @@ footer {
 
   .fame-info h3 {
     font-size: 20px;
-  }
-
-  .fame-info p {
-    font-size: 14px;
   }
 }
