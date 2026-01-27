@@ -1,117 +1,14 @@
 /* =======================================================
-   Kibiko Primary School – Forbes Style + African Art
+   LANDSCAPE HERO BANNER (All Pages)
 ======================================================= */
 
-/* GLOBAL SAFETY */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-/* BODY */
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  color: #ffffff;
-  line-height: 1.6;
-
-  background-color: #2b323b;
-  background-image: url('assets/images/african-pattern.png');
-  background-size: 250px 250px;
-  background-repeat: repeat;
-  background-attachment: fixed;
-  position: relative;
-}
-
-/* Overlay */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(43, 50, 59, 0.85);
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* MEDIA */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 20px 40px;
-  background: rgba(255,255,255,0.95);
-  color: #000;
-  border-bottom: 1px solid rgba(0,0,0,0.4);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  font-weight: 700;
-}
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #000;
-  font-weight: 500;
-  transition: color 0.12s linear;
-}
-
-nav a:hover {
-  color: #c7af26;
-  text-decoration: underline;
-}
-
-/* HERO */
-.hero {
-  padding: 80px 40px;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
-}
-
-.hero p {
-  font-size: 18px;
-  max-width: 700px;
-  margin: auto;
-}
-
-/* HERO BANNER */
 .hero-banner {
   width: 100%;
   height: 340px;
   background: url("assets/images/kibiko-landscape.jpg") center/cover no-repeat;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
   position: relative;
   z-index: 1;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 
 .hero-overlay {
@@ -129,191 +26,28 @@ nav a:hover {
 .hero-overlay h1 {
   font-family: 'Playfair Display', serif;
   font-size: 46px;
+  margin: 0 0 10px 0;
+  color: #ffffff;
 }
 
 .hero-overlay p {
   font-size: 18px;
+  margin: 0;
+  color: rgba(255,255,255,0.92);
   max-width: 720px;
 }
 
-/* CONTENT GRID */
-.content {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  position: relative;
-  z-index: 1;
-}
-
-/* CARD */
-.card {
-  background: rgba(0,0,0,0.5);
-  border-top: 3px solid #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  transition: transform 0.12s linear, box-shadow 0.12s linear;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 14px rgba(0,0,0,0.3);
-}
-
-.card h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  background: rgba(245,220,81,0.15);
-  padding: 6px 10px;
-  border-radius: 4px;
-}
-
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 18px;
-  border: 1px solid #fff;
-  color: #fff;
-  text-decoration: none;
-  background: rgba(199,175,38,0.25);
-  border-radius: 4px;
-  transition: background 0.12s linear, transform 0.12s linear;
-}
-
-.btn:hover {
-  background: rgba(199,36,36,0.85);
-  transform: translateY(-2px);
-}
-
-/* WALL OF FAME */
-.fame-grid {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-  gap: 25px;
-}
-
-.fame-card {
-  background: rgba(0,0,0,0.55);
-  border-top: 3px solid #fff;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.fame-photo {
-  height: 220px;
-}
-
-.fame-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.fame-info {
-  padding: 18px;
-}
-
-/* PRINCIPAL */
-.principal-section {
-  grid-column: 1 / -1;
-}
-
-.principal-card {
-  background: rgba(0,0,0,0.55);
-  border-top: 3px solid #fff;
-  padding: 22px;
-  border-radius: 12px;
-}
-
-.principal-body {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 22px;
-}
-
-.principal-photo {
-  height: 320px;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.principal-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* FOOTER */
-footer {
-  background: rgba(255,255,255,0.95);
-  color: #000;
-  padding: 30px;
-  text-align: center;
-  font-size: 14px;
-  position: relative;
-  z-index: 1;
-}
-
-/* =======================
-   RESPONSIVE BREAKPOINTS
-======================= */
-
-/* Tablets & Phones */
+/* Mobile */
 @media (max-width: 768px) {
-
-  .navbar {
-    padding: 15px 20px;
+  .hero-banner {
+    height: 260px;
   }
 
-  .hero h1,
   .hero-overlay h1 {
-    font-size: 30px;
+    font-size: 32px;
   }
 
-  .hero p,
   .hero-overlay p {
     font-size: 15px;
-  }
-
-  .content {
-    padding: 25px 18px;
-  }
-
-  .principal-body {
-    grid-template-columns: 1fr;
-  }
-
-  .principal-photo {
-    height: 240px;
-  }
-
-  .fame-grid {
-    grid-template-columns: 1fr;
-  }
-
-  footer {
-    padding: 20px 15px;
-    font-size: 13px;
-  }
-}
-
-/* Small Phones */
-@media (max-width: 480px) {
-
-  .hero-overlay h1 {
-    font-size: 26px;
-  }
-
-  .hero-overlay p {
-    font-size: 14px;
-  }
-
-  .card h2 {
-    font-size: 18px;
   }
 }
