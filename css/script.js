@@ -1,3 +1,5 @@
+const slides = Array.from(document.querySelectorAll(".fame-card, .principal-card"));
+
 document.addEventListener("DOMContentLoaded", () => {
   const slider = document.querySelector(".fame-slider");
   const track = document.querySelector(".fame-track");
