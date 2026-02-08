@@ -255,7 +255,7 @@ section { width: 100%; }
 }
 
 /* Slider buttons */
-.slider-btn {
+.slider-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
