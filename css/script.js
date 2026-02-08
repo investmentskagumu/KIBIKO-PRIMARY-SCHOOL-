@@ -84,3 +84,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("resize", updateWidth);
 });
+nextBtn.addEventListener("click", () => moveToSlide(currentIndex + 1));
+prevBtn.addEventListener("click", () => moveToSlide(currentIndex - 1));
