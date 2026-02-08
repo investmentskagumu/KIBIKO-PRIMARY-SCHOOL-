@@ -272,6 +272,8 @@ section { width: 100%; }
   align-items: center;
   justify-content: center;
 }
+.fame-track { z-index: 1; }
+}
 
 .slider-btn:hover {
   background: var(--secondary);
