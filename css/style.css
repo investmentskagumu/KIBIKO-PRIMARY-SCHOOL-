@@ -280,33 +280,6 @@ section { width: 100%; }
   }
 }
 /* ==============================
-   RESPONSIVE ADJUSTMENTS
-================================ */
-@media (max-width: 768px) {
-  .fame-card,
-  .principal-card {
-    flex: 0 0 78%;
-  }
-
-  .slider-btn {
-    width: 34px;
-    height: 34px;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .fame-card,
-  .principal-card {
-    flex: 0 0 88%;
-  }
-
-  .fame-slider {
-    padding-inline: 1rem;
-  }
-}
-
-/* ==============================
    FOOTER
 ================================ */
 footer {
