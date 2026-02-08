@@ -174,9 +174,6 @@ section { width: 100%; }
   max-width: 100%;
 }
 
-/* =====================================
-   WALL OF FAME – RESPONSIVE SLIDER
-===================================== */
 /* ==============================
    WALL OF FAME GRID
 ================================ */
@@ -189,8 +186,8 @@ section { width: 100%; }
   padding: 0 1rem;
 }
 
-/* Card adjustments */
-.fame-card {
+.fame-card,
+.principal-card {
   display: flex;
   flex-direction: column;
   background: #fff;
@@ -200,40 +197,44 @@ section { width: 100%; }
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
-.fame-card:hover {
+.fame-card:hover,
+.principal-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 24px rgba(0,0,0,.08);
 }
 
-/* Image inside card */
-.fame-photo img {
+/* Images */
+.fame-photo img,
+.principal-photo img {
   width: 100%;
   height: 160px;
   object-fit: cover;
-  display: block;
 }
 
 /* Card content */
-.fame-info {
+.fame-info,
+.principal-text {
   padding: 0.85rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  justify-content: space-between;
   flex-grow: 1;
 }
 
-.fame-info h3 {
+.fame-info h3,
+.principal-text h3 {
   font-size: 1rem;
   color: var(--primary);
 }
 
-.fame-info p {
+.fame-info p,
+.principal-text p {
   font-size: 0.8rem;
-  color: var(--text);
   line-height: 1.4;
 }
 
-.role {
+.role,
+.principal-role {
   font-size: 0.75rem;
   color: var(--muted);
 }
@@ -245,26 +246,13 @@ section { width: 100%; }
   margin-top: 0.3rem;
 }
 
-/* Make all cards same height in row */
-.fame-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.fame-info {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .fame-grid {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
-
-  .fame-photo img {
+  .fame-photo img,
+  .principal-photo img {
     height: 140px;
   }
 }
@@ -274,8 +262,8 @@ section { width: 100%; }
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-
-  .fame-photo img {
+  .fame-photo img,
+  .principal-photo img {
     height: 160px;
   }
 }
